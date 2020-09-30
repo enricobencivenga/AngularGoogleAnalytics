@@ -1,0 +1,16 @@
+<div class="product" *ngFor="let product of products" href="https://angular.io/tutorial">
+  <div class="row">
+    <div class="col-2">
+      <img src="{{product.image}}" class="img img-fluid product-image" />
+    </div>
+    <div class="col-8">
+      <div><span class="product-brand">BRAND</span> - <span class="product-category">{{product.category}}</span></div>
+      <div class="product-name">{{product.title}}</div>
+      <div class="product-description">{{product.description}}</div>
+    </div>
+    <div class="col-2">
+      <div class="product-price">{{product.price | number:'1.2-2'}} €</div>
+      <div><button class="btn btn-success" (click)="addToCartFn(product)"><i class="fas fa-shopping-cart"></i>Add To Cart</button></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<ng-container>
+  <div>
+    <a aria-label="Shopping cart" title="Shopping cart" class="cart-icon" href="javascript:void(0);"
+      (click)="open = !open">
+      <span class="badge badge-danger cart-badge">{{products.length}}</span>
+      <i width="40" alt="Shopping cart" class="fas fa-shopping-cart"></i>
+    </a>
+  </div>
+  <div *ngIf="open" class="cart-product-list">
+    <div *ngFor="let cp of cartProducts" class="cart-product">
+      <div class="row">
+        <div class="col-2"><img src="{{cp.product.image}}" class="cart-product-image img img-fluid" /></div>
+        <div class="col-6">
+          <div class="cart-product-name">{{cp.product.title}}</div>
+        </div>
+        <div class="col-4">
+          <div class="cart-product-price">{{cp.product.price | number:'1.2-2'}} € ({{cp.quantity}})</div>
+          <div class="cart-product-price">
+            <span><a href="javascript:void(0)" class="btn btn-sm btn-warning" (click)="removeFromCartFn(cp.product)">-</a>&nbsp;</span>
+            <span>{{cp.product.price * cp.quantity | number:'1.2-2'}} €</span>
+            <span>&nbsp;<a href="javascript:void(0)" class="btn btn-sm btn-warning" (click)="addToCartFn(cp.product)">+</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

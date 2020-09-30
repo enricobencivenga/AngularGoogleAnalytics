@@ -1,0 +1,41 @@
+.cart-icon {
+    margin-right: 16px;
+    font-size: 30px;
+    color: white !important;
+}
+
+.cart-badge {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    font-size: 13px;
+}
+
+.cart-product-list {
+    position: absolute;
+    right: 12px;
+    background: white;
+    z-index: 2;
+    border: 1px lightgrey solid;
+}
+
+.cart-product {
+    width: 500px;
+    height: 80px;
+    color: black;
+    padding: 10px;
+}
+
+.cart-product-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-product-image {
+    max-height: 60px;  
+}
+
+.cart-product-price {
+    font-size: 14px;
+    font-weight: bold;
+}
